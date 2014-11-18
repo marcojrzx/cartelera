@@ -1,0 +1,14 @@
+/**
+* Implements hook_menu().
+*/
+function ng_node_calender_menu() {
+    $items = array();
+    $items['ng_node/calender_app'] = array(
+        'title' => t('Angular Node Calender'),
+        'page callback' => 'ng_node_calender',
+        'access arguments' => array('access content'),
+    );
+    
+    return $items;
+}
+- See more at: http://redcrackle.com/blog/configuring-drupal-angularjs-integration#sthash.OPdAHdbs.dpuf

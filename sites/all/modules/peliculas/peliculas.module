@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * 
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function peliculas_menu() {
+  $items['pelicula'] = array(
+    'title' => 'TODAS LAS PELICULAS',
+    'page callback' => 'pelicula_page',
+    'access arguments' => array('access content'),
+  );
+
+  return $items;
+}
+
+function peliculas_theme(){
+  return array(
+    'todas_peliculas' => array(
+      'template' => 'todas-peliculas',
+      ),
+    );
+
+}
+
+
+function pelicula_page() {
+
+  drupal_add_library('angularjs', 'angularjs');
+  
+  $path = drupal_get_path('module', 'peliculas');
+
+  drupal_add_js($path . '/js/peliculas.gen.js');
+
+  return theme('todas_peliculas');
+}
+
+?>
