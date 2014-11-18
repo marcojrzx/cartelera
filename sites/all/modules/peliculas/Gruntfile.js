@@ -7,12 +7,12 @@ module.exports = function (grunt) {
     watch: {
       scripts: {
         files: ['./js/**/*.js', '!./js/peliculas.gen.js'],
-        tasks: ['jshint', 'concat:cats']
+        tasks: ['jshint', 'concat:peliculas']
       }
     },
     concat: {
-      cats: {
-        src: ['./js/peliculas/**/*.js', '!./js/peliculas/cats.gen.js'],
+      peliculas: {
+        src: ['./js/peliculas/**/*.js', '!./js/peliculas/peliculas.gen.js'],
         dest: './js/peliculas.gen.js'
       }
     },

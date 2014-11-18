@@ -106,6 +106,6 @@
       "WebPage"
     ],
    "globals" : {
-      "cats": true
+      "peliculas": true
    }
 }
