@@ -7,7 +7,7 @@
 /**
  * Implements hook_menu().
  */
-function peliculas_menu() {
+function peliculas_menu() { 
   $items['pelicula'] = array(
     'title' => 'TODAS LAS PELICULAS',
     'page callback' => 'pelicula_page',
@@ -27,6 +27,7 @@ function peliculas_theme(){
 }
 
 
+
 function pelicula_page() {
 
   drupal_add_library('angularjs', 'angularjs');
@@ -34,6 +35,12 @@ function pelicula_page() {
   $path = drupal_get_path('module', 'peliculas');
 
   drupal_add_js($path . '/js/peliculas.gen.js');
+
+ 
+
+  
+  drupal_add_css($path.'/css/set2.css');
+  drupal_add_css($path.'/css/bootstrap.css');
 
   return theme('todas_peliculas');
 }

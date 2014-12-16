@@ -1,0 +1,22 @@
+<div class="modal-header">
+
+       <h3 class="modal-title">{{dt.title}} - <small> {{dt.horario}}</small> </h3>
+
+
+</div>
+<div class="modal-body">
+ <div class="row">
+   <div class="col-lg-3" ng-hide="!dt.img8col" >
+	<img  ng-src="{{dt.Image}}" class="img-responsive">
+   </div>
+   <div class="col-lg-9 text-justify">
+	{{dt.Body}} 
+   </div>
+ </div>
+  <br>
+  <br>
+  <strong>Lugar: {{dt.Lugar}}</strong>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-danger" ng-click="cancel()">Cerrar</button>
+</div>
